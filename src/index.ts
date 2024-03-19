@@ -1,9 +1,17 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+// Routes
+import { publicRoutesV1 } from "./routes/public";
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+const app = new Hono();
 
-export default app
+app.get("/", (ctx) => {
+  return ctx.json({
+    ok: true,
+    message: "Hello, World!",
+  });
+});
+
+app.route("/public", publicRoutesV1);
+
+export default app;
