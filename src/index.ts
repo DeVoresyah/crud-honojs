@@ -2,7 +2,7 @@ import { OpenAPIHono, createRoute, z } from "@hono/zod-openapi";
 import { swaggerUI } from "@hono/swagger-ui";
 
 // Routes
-import { publicRoutesV1 } from "./routes/public";
+import { publicRoutesV1 } from "#routes/public";
 
 import "dotenv/config";
 

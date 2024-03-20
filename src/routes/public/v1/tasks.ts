@@ -1,10 +1,10 @@
 import { OpenAPIHono } from "@hono/zod-openapi";
-import { formatZodErrors } from "../../../helpers/error-helpers";
-import { db } from "../../../database";
+import { formatZodErrors } from "#helpers/error-helpers";
+import { db } from "#database";
 import { eq } from "drizzle-orm";
 
 // Schemas
-import { tasks as tasksSchema } from "../../../database/schema";
+import { tasks as tasksSchema } from "#database/schema";
 
 // OpenAPI
 import {
@@ -13,7 +13,7 @@ import {
   showTask,
   updateTask,
   deleteTask,
-} from "../../../docs/public/v1";
+} from "#handlers/public/v1";
 
 const tasks = new OpenAPIHono({
   defaultHook: (result, ctx) => {
