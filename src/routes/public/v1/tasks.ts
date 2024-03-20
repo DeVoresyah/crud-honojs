@@ -1,11 +1,14 @@
 import { Hono } from "hono";
+import { db } from "../../../database";
 
 const tasks = new Hono();
 
-tasks.get("/tasks", (ctx) => {
+tasks.get("/tasks", async (ctx) => {
+  const tasks = await db.query.tasks.findMany();
+
   return ctx.json({
     ok: true,
-    data: [],
+    data: tasks,
   });
 });
 

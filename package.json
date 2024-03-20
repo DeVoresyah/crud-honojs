@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts",
+    "dev": "bun run --hot src/index.ts",
     "migration:generate": "drizzle-kit generate:pg",
     "migration:run": "bun run src/database/migrate.ts"
   },
@@ -14,7 +13,6 @@
     "@cloudflare/workers-types": "^4.20240208.0",
     "@types/pg": "^8.11.3",
     "dotenv": "^16.4.5",
-    "drizzle-kit": "^0.20.14",
-    "wrangler": "^3.32.0"
+    "drizzle-kit": "^0.20.14"
   }
 }
