@@ -1,8 +1,12 @@
 name = "crud-hono"
 compatibility_date = "2023-12-01"
 
-# [vars]
-# MY_VAR = "my-variable"
+[vars]
+DB_HOST = "localhost"
+DB_PORT = "5432"
+DB_NAME = "crud_hono"
+DB_USER = "devoresyah"
+DB_PASSWORD = ""
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
