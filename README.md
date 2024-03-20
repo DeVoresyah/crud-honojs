@@ -46,7 +46,7 @@ bun install
 
 ## 🗃 Database Setup
 
-1. Generate** migration:**
+1. **Generate migration:**
 
 ```bash
 bun migration:generate
